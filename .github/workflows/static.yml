@@ -36,7 +36,9 @@ jobs:
         uses: actions/setup-node@v3.8.1
         with:
           node-version: v20.8.0
-      - run: node index.js
+      - run: |
+          npm install
+          node index.js
         
       - name: Setup Pages
         uses: actions/configure-pages@v3
